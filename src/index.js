@@ -1,12 +1,16 @@
-// import _ from 'lodash';
-import myName from './myName.js';
+import { Imageslider } from './image-slider.js';
 
-function component() {
-	const element = document.createElement('div');
+const Index = (() => {
+	const body = document.body;
 
-	// Using my function
-	element.innerHTML = myName('Andres');
-	return element;
-}
+	const render = () => {
+		let images = [];
+		images.push("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*VOVGtVFRVHp6wqrYlcPFAw.png&f=1&nofb=1");
+		let myImageslider = new Imageslider(null, null, images);
+		body.appendChild(myImageslider.render());
+	}
 
-document.body.appendChild(component());
+	return { render };
+})();
+
+Index.render();
