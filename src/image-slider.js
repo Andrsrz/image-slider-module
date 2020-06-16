@@ -36,8 +36,9 @@ class Imageslider {
 
 	_setNavEvents(element, index){
 		element.addEventListener("click", () => {
-			console.log(index);
-			this._image.src = this.images[index];
+			this._index = index;
+			console.log(this._index);
+			this._image.src = this.images[this._index];
 		}, false);
 	}
 
@@ -83,6 +84,9 @@ class Imageslider {
 			circle.style.height = "10px";
 			circle.style.backgroundColor = "#333";
 			circle.style.cursor = "pointer";
+			/* I need to set the click event here
+			 * because setting them outside the elements
+			 * doesn't exists. */
 			this._setNavEvents(circle, i);
 			listItem.appendChild(circle);
 			this._circles.appendChild(listItem);
