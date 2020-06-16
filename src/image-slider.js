@@ -12,7 +12,7 @@ class Imageslider {
 		this._circles = document.createElement("ul");
 	}
 
-	_setEvents(){
+	_setButtonsEvents(){
 		this._next.addEventListener("click", () => {
 			if(this._index < this.images.length - 1)
 				this._index++;
@@ -31,6 +31,13 @@ class Imageslider {
 
 			console.log(this._index);
 			this._image.src = this.images[this._index];
+		}, false);
+	}
+
+	_setNavEvents(element, index){
+		element.addEventListener("click", () => {
+			console.log(index);
+			this._image.src = this.images[index];
 		}, false);
 	}
 
@@ -60,7 +67,7 @@ class Imageslider {
 
 	render(){
 		this._setStyle();
-		this._setEvents();
+		this._setButtonsEvents();
 		this._imageContainer.appendChild(this._previous);
 		this._image.src = this.images[this._index];
 		this._imageContainer.appendChild(this._image);
@@ -75,6 +82,8 @@ class Imageslider {
 			circle.style.width = "10px";
 			circle.style.height = "10px";
 			circle.style.backgroundColor = "#333";
+			circle.style.cursor = "pointer";
+			this._setNavEvents(circle, i);
 			listItem.appendChild(circle);
 			this._circles.appendChild(listItem);
 		}
