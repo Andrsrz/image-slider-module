@@ -1,23 +1,23 @@
 {
-  "name": "image-slider-module",
-  "version": "1.0.0",
-  "description": "Image Slider",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Andrsrz/image-slider-module.git"
-  },
-  "author": "Andres Ruiz",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Andrsrz/image-slider-module/issues"
-  },
-  "homepage": "https://github.com/Andrsrz/image-slider-module#readme",
-  "devDependencies": {
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
-  }
+	"name": "image-slider-module",
+	"version": "1.0.1",
+	"description": "Image Slider",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Andrsrz/image-slider-module.git"
+	},
+	"author": "Andres Ruiz",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Andrsrz/image-slider-module/issues"
+	},
+	"homepage": "https://github.com/Andrsrz/image-slider-module#readme",
+	"devDependencies": {
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.11"
+	}
 }
