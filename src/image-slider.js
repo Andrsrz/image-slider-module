@@ -1,8 +1,9 @@
 class Imageslider {
-	constructor(x, y, images){
+	constructor(x, y, images, interval){
 		this.x = x ? x : "100";
 		this.y = y ? y : "25";
 		this.images = images ? images : [];
+		this.interval = interval ? interval : 5000;
 		this._index = 0;
 		this._sliderContainer = document.createElement("div");
 		this._imageContainer = document.createElement("div");
@@ -100,7 +101,7 @@ class Imageslider {
 
 		setInterval(() => {
 			this._next.click();
-		}, 5000);
+		}, this.interval);
 
 		return this._sliderContainer;
 	}
