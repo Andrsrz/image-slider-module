@@ -1,6 +1,6 @@
 {
 	"name": "image-slider-module",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Image Slider",
 	"main": "index.js",
 	"scripts": {

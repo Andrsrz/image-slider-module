@@ -4,6 +4,8 @@
 Create image sliders wherever you want inside you webpage. The slider changes
 every 5 seconds by default.
 
+[Live Demo](https://andrsrz.github.io/image-slider-module/).
+
 ## Getting Started
 You can download it from [npm](https://www.npmjs.com/package/image-slider-module)
 ``` sh
