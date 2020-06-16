@@ -3,12 +3,35 @@ class Imageslider {
 		this.x = x ? x : "100";
 		this.y = y ? y : "25";
 		this.images = images ? images : [];
+		this._index = 0;
 		this._sliderContainer = document.createElement("div");
 		this._imageContainer = document.createElement("div");
 		this._image = document.createElement("img");
 		this._previous = document.createElement("button");
 		this._next = document.createElement("button");
 		this._circles = document.createElement("ul");
+	}
+
+	_setEvents(){
+		this._next.addEventListener("click", () => {
+			if(this._index < this.images.length - 1)
+				this._index++;
+			else
+				this._index = 0;
+
+			console.log(this._index);
+			this._image.src = this.images[this._index];
+		}, false);
+
+		this._previous.addEventListener("click", () => {
+			if(this._index > 0)
+				this._index--;
+			else
+				this._index = this.images.length - 1;
+
+			console.log(this._index);
+			this._image.src = this.images[this._index];
+		}, false);
 	}
 
 	_setStyle(){
@@ -37,14 +60,17 @@ class Imageslider {
 
 	render(){
 		this._setStyle();
+		this._setEvents();
 		this._imageContainer.appendChild(this._previous);
-		this._image.src = this.images[0];
+		this._image.src = this.images[this._index];
 		this._imageContainer.appendChild(this._image);
 		this._imageContainer.appendChild(this._next);
 		this._sliderContainer.appendChild(this._imageContainer);
 		for(let i = 0; i < this.images.length; i++){
 			let listItem = document.createElement("li");
 			let circle = document.createElement("div");
+			listItem.style.display = "inline-block";
+			listItem.style.margin = "0 5px 0 5px";
 			circle.style.borderRadius = "50%";
 			circle.style.width = "10px";
 			circle.style.height = "10px";

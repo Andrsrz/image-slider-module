@@ -5,8 +5,11 @@ const Index = (() => {
 
 	const render = () => {
 		let images = [];
-		images.push("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*VOVGtVFRVHp6wqrYlcPFAw.png&f=1&nofb=1");
-		let myImageslider = new Imageslider(null, null, images);
+		images.push("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.X3BxyzOnpnMj3XDWAG2m_QHaEK%26pid%3DApi&f=1");
+		images.push("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.oZprK704m-2D-Fuw5BP5ugHaEK%26pid%3DApi&f=1");
+		images.push("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.dXQTRcslLm5ia0Za6aIjhgHaD5%26pid%3DApi&f=1");
+		images.push("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.KWA8-sYTNMZYgu00HdW8MwHaDt%26pid%3DApi&f=1");
+		let myImageslider = new Imageslider(100, 25, images);
 		body.appendChild(myImageslider.render());
 	}
 
