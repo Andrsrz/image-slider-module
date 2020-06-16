@@ -97,6 +97,11 @@ class Imageslider {
 			this._circles.appendChild(listItem);
 		}
 		this._sliderContainer.appendChild(this._circles);
+
+		setInterval(() => {
+			this._next.click();
+		}, 5000);
+
 		return this._sliderContainer;
 	}
 };
