@@ -6,6 +6,7 @@ class Imageslider {
 		this._index = 0;
 		this._sliderContainer = document.createElement("div");
 		this._imageContainer = document.createElement("div");
+		this._realImageContainer = document.createElement("div");
 		this._image = document.createElement("img");
 		this._previous = document.createElement("button");
 		this._next = document.createElement("button");
@@ -58,8 +59,11 @@ class Imageslider {
 		this._previous.style.backgroundColor = "transparent";
 		this._previous.style.border = "none";
 		this._previous.innerHTML = "<";
-		this._image.setAttribute("width", this.x - 15 + "%");
-		this._image.setAttribute("height", this.y - 15 + "%");
+		this._realImageContainer.style.width = this.x + "%";
+		this._realImageContainer.style.height = this.y + "%";
+		this._image.style.width = "100%";
+		this._image.style.height = "100%";
+		this._image.style.objectFit = "contain";
 		this._next.style.backgroundColor = "transparent";
 		this._next.style.border = "none";
 		this._next.innerHTML = ">";
@@ -71,7 +75,8 @@ class Imageslider {
 		this._setButtonsEvents();
 		this._imageContainer.appendChild(this._previous);
 		this._image.src = this.images[this._index];
-		this._imageContainer.appendChild(this._image);
+		this._realImageContainer.appendChild(this._image);
+		this._imageContainer.appendChild(this._realImageContainer);
 		this._imageContainer.appendChild(this._next);
 		this._sliderContainer.appendChild(this._imageContainer);
 		for(let i = 0; i < this.images.length; i++){
